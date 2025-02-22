@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000;
+}
+
+header {
+    background-color: #002395;
+    color: white;
+    padding: 20px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: fade-in 1s ease-in-out;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    width: 50px;
+    height: auto;
+    opacity: 0;
+    animation: logo-fade-in 1.5s ease-in-out forwards;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    animation: fade-in 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    font-weight: bold;
+    color: #002395;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.important {
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-in 1.5s ease-in-out forwards;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.email-form {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fade-in 2s ease-in-out forwards;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #d71a28;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b71a20;
+    transform: scale(1.1);
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes logo-fade-in {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
